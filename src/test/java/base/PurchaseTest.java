@@ -21,13 +21,16 @@ public class PurchaseTest extends BaseTest{
         productsPage.addBackpackToCart();
         productsPage.openCart();
 
+        Assert.assertTrue(cartPage.isBackpackItemDisplayed(), "Backpack is not in the cart!");
+
         cartPage.clickCheckout();
 
         checkoutStepOnePage.fillCheckoutForm("Alice", "Ice", "345");
         checkoutStepOnePage.clickContinue();
 
+        Assert.assertTrue(cartPage.isBackpackItemDisplayed(), "Backpack is not in the cart!");
         checkoutStepTwoPage.finishOrder();
 
-        Assert.assertTrue(completePage.isOrderCompletedWithSuccess(),"Order complation failed!");
+        Assert.assertTrue(completePage.isOrderCompletedWithSuccess(),"Order completion failed!");
     }
 }
