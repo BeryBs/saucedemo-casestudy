@@ -18,10 +18,13 @@ This project automates the happy path purchase workflow of the SauceDemo website
 - Selenium WebDriver
 - TestNG
 
-## Test Scenario
-- Login with valid credentials
-- Add backpack to cart
-- Proceed to checkout
-- Fill checkout information
-- Complete the purchase
-- Verify successful order confirmation
+## Test Steps
+1) Login with valid credentials (standard_user, secret_sauce)
+2) Add backpack to cart
+3) Click the cart icon 
+4) Check if the backpack is added to the cart
+5) Click the "Checkout" button
+6) Fill checkout information
+7) Click the "Continue" button and complete the purchase 
+8) Navigate to checkout: overview and click the "Finish" button
+9) Verify successful order confirmation 
